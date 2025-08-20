@@ -1,16 +1,25 @@
 {
   "version": 2,
   "builds": [{ "use": "@vercel/node" }],
-  "routes": [{ "src": "/(.*)", "dest": "index.js" }],
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "/api/send-reminders",
+      "dest": "/api/send-reminders.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ],
   "crons": [
-  {
-    "path": "/api/send-reminders",
-    "schedule": "0 3 * * *"
-  },
-  {
-    "path": "/api/send-reminders",
-    "schedule": "45 13 * * *"
-  }
-]
- }
+    {
+      "path": "/api/send-reminders",
+      "schedule": "0 3 * * *"
+    },
+    {
+      "path": "/api/send-reminders",
+      "schedule": "50 13 * * *"
+    }
+  ]
+}
