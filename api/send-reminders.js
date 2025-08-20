@@ -1,6 +1,6 @@
 const connectToDatabase = require("./src/database/connect");
 const ReminderModel = require("./src/models/reminder.model");
-const SubscriptionModel = require("./src/models/subscription.model");
+const SubscriptionModel = require("../src/models/subscription.model");
 const webPush = require("web-push");
 
 export default async function handler(req, res) {
