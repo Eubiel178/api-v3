@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const reminderSchema = new mongoose.Schema({
+  isCron: { type: String, default: false },
   title: { type: String, required: true, minlength: 1 },
   notificado: { type: Boolean, default: false }, // ✅ Novo campo
   description: { type: String, required: false },
