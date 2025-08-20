@@ -5,12 +5,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
 "crons": [
   {
-    "path": "/reminders",
+    "path": "/send-reminders",
     "schedule": "0 3 * * *"   
   },
   {
-    "path": "/reminders",
-      "schedule": "40 12 * * *"
+    "path": "/send-reminders",
+    "schedule": "5 13 * * *"
   }
 ]
 

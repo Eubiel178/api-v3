@@ -88,4 +88,5 @@ cron.schedule("* * * * *", async () => {
 
 app.listen(PORT, LOCAL_ADDRESS, () => {
   console.log(`🟢 Servidor rodando em http://${LOCAL_ADDRESS}:${PORT}`);
+  console.log(`🟢 Servidor rodando em http://localhost:${PORT}`);
 });
