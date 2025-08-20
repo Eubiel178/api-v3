@@ -3,7 +3,6 @@ require("events").EventEmitter.defaultMaxListeners = 20;
 const express = require("express");
 const cors = require("cors");
 const { config } = require("dotenv");
-const http = require("http");
 
 const connectToDatabase = require("./src/database/connect");
 const ReminderModel = require("./src/models/reminder.model");
@@ -11,7 +10,7 @@ const ReminderModel = require("./src/models/reminder.model");
 const userControl = require("./src/routes/userControl");
 const taskControl = require("./src/routes/taskControl");
 const reminderControl = require("./src/routes/reminderControl");
-const subscriptionControl = require("./src/routes/subscriptionControl");
+// const subscriptionControl = require("./src/routes/subscriptionControl");
 
 config();
 
@@ -45,7 +44,7 @@ connectToDatabase();
 app.use(userControl);
 app.use(taskControl);
 app.use(reminderControl);
-app.use(subscriptionControl);
+// app.use(subscriptionControl);
 
 const SubscriptionModel = require("./src/models/subscription.model");
 const cron = require("node-cron");
