@@ -10,7 +10,7 @@
   },
   {
     "path": "/send-reminders",
-    "schedule": "35 13 * * *"
+    "schedule": "30 13 * * *"
   }
 ]
 
