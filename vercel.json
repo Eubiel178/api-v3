@@ -1,4 +1,15 @@
 {
+  "routes": [
+    {
+      "src": "/api/send-reminders",
+      "dest": "/api/send-reminders.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.js"
+    }
+  ],
+  
   "crons": [
       {
       "path": "/api/send-reminders",
@@ -6,7 +17,7 @@
     },
     {
       "path": "/api/send-reminders",
-      "schedule": "25 14 * * *"
+      "schedule": "0 17 * * *"
     }
   ]
 }
