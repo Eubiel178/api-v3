@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 
-const MONGODB_URI = `mongodb://admin:root@cluster0-shard-00-00.d1a0iys.mongodb.net:27017,cluster0-shard-00-01.d1a0iys.mongodb.net:27017,cluster0-shard-00-02.d1a0iys.mongodb.net:27017/?replicaSet=atlas-xxxxxx-shard-0&authSource=admin&retryWrites=true&w=majority
-`;
+const MONGODB_URI = `mongodb+srv://admin:root@todolist.d1a0iys.mongodb.net/todolist?retryWrites=true&w=majority&appName=todolist`;
 
 let cached = global.mongoose;
 
@@ -10,8 +9,6 @@ if (!cached) {
 }
 
 async function connectToDatabase() {
-  console.log("🔌 Conectando ao banco de dados...");
-
   if (cached.conn) {
     return cached.conn; // Retorna a conexão já existente
   }
