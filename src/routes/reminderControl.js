@@ -1,5 +1,6 @@
 const ReminderModel = require("../models/reminder.model");
 const { Router } = require("express");
+const connectToDatabase = require("../database/connect");
 
 const router = Router();
 const SubscriptionModel = require("../models/subscription.model");
@@ -7,6 +8,7 @@ const webPush = require("web-push");
 
 router.post("/reminders", async (req, res) => {
   try {
+    await connectToDatabase(); // garante conexão antes de qualquer find/create
     const { body } = req;
 
     if (body.isCron) {
