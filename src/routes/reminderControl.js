@@ -34,6 +34,8 @@ router.get("/reminders", async (req, res) => {
       notificado: false,
     });
 
+    console.log(lembretes);
+
     for (const lembrete of lembretes) {
       const sub = await SubscriptionModel.findOne({
         userID: lembrete.userID,
